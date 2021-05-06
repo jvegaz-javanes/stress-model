@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+    <meta charset="utf-8" />
+    <meta name="description" content="P&aacute;gina principal e inicio de sesi&&oacute;"/><!--Específica la descripción de la página-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"/>
+    <title>REGISTRO USUARIO</title>
+  </head>
+
+  <body>
+
+    <div class="form-style-10">
+<form id="formularioRegistro">
+    <div class="section">Nombre & Sector </div>
+    <div class="inner-wrap">
+      <label>Nombre completo <input #nombre formControlName="nombre" type="text" name="nombre" id="nombre"/></label>
+      <label>Sector</label>
+      <select #sector name="Sector">
+        <option value="AMS">AMS</option>
+        <option value="Business Unit">Business Unit</option>
+        <option value="CIO">CIO</option>
+        <option value="CLOUD">CLOUD</option>
+        <option value="Comercial">Comercial</option>
+        <option value="CTO">CTO</option>
+        <option value="GBS">GBS</option>
+        <option value="Global Markets">Global Markets</option>
+        <option value="GTS">GTS</option>
+        <option value="MKT">MKT</option>
+        <option value="S&D">S&D</option>
+      </select>
+     <!-- <label>Sector <input #sector formControlName="sector" type="text" name="sector" id="sector"/></label>-->
+    </div>
+
+    <div class="section">Correo</div>
+    <div class="inner-wrap">
+        <label>Correo <input #correo formControlName="correo" type="email" name="mail" id="correo"/></label>
+        <label>Confirmaci&oacute;n de correo <input #correo2 formControlName="correo2" type="email" name="mail2" id="correo2"/></label>
+    </div>
+
+    <div class="section">Contrase&ntilde;a</div>
+        <div class="inner-wrap">
+        <label>Contraseña <input #password formControlName="password" type="password" name="pass" id="password" /></label>
+        <label>Confirmaci&oacute;n de contrase&ntilde;a <input #password2 formControlName="password2" type="password" name="pass2" id="password2"/></label>
+    </div>
+
+    <br/>
+    <div class="submit"> <!--Boton submit-->
+      <button routerLink = " / Login " (click) = " registro (nombre.value, sector.value,
+        correo.value, correo2.value, password.value, password2.value) " type="button" class="btn btn-secondary" >Reg&iacute;strate</button>
+      <!--< input  [disabled] = " signupForm.invalid "  routerLink = " / Login "  type = " submit "  name = " ok "  (click) = " registro (nombre.value, sector.value,
+        correo.value, correo2.value, password.value, password2.value) " />-->
+    </div>
+
+    <div class="regesar"> <!--Boton regresar-->
+      <button type="button" class="btn btn-secondary" routerLink="/Login">Regresar</button>
+    </div>
+
+</form>
+</div>
+  </body>
+</html>

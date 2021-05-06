@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: gill sans;
+}
+
+header{
+  width: 100%;
+  background: #628395;
+}
+
+#btn-menu{
+  display: none;
+}
+
+header label{
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-right: 1px solid #fff;
+}
+
+header label:hover{
+  cursor: pointer;
+  background: rgb(0, 0, 0,0.3);
+}
+
+.menu ul{
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu li{
+  text-align: center;
+  flex-grow: 1;
+  border-right: 1px solid  #fff;
+}
+
+.menu li:hover{
+  background: rgb(0, 0, 0,0.3);
+}
+
+.menu li {
+  display: block;
+  padding: 20px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Para hacer menú responsivo según el tamaño de la pantalla del dispositivo
+Medida tablet*/
+@media (max-width:768px){
+  header label{
+    display: block;
+  }
+  .menu{
+    position: absolute;
+    background: #628395;
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.5s;
+  }
+
+  .menu ul{
+    flex-direction: column;
+  }
+
+  .menu li{
+    border-top: 1px solid #fff;
+  }
+
+  #btn-menu:checked ~ .menu{
+    margin: 0;
+  }
+}
+
+.info{
+  background:#93B7BE;
+  height: 100vh;
+  width: 50%;
+}
+
+
+.loginBox{
+  height: 100vh;
+  width: 100%;
+  background:#F2F7F2;
+  color: #628395;
+  box-sizing: border-box;
+  padding: 70px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loginBox .avatar{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 90px;
+  left: calc(48% - 50px);
+}
+
+.loginBox input{ /*Formato email y password*/
+  width: 100%;
+  margin-bottom:40px;
+}
+
+.go, .boton{
+  border: 1px solid #628395;
+  padding: 10px;
+  background-color: #628395;
+  color: #FFF;
+  text-decoration: none;
+
+  font-family:gill sans;
+  border-radius: 50px;
+  float: none;
+}
+
+#pantalla-dividida{/*NO BORRAR*/
+  display: flex;
+}

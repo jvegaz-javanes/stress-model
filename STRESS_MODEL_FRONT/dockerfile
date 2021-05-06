@@ -1,0 +1,24 @@
+FROM ubuntu:18.04
+
+
+RUN apt-get update
+RUN apt-get -y install curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
+RUN apt-get -y install nodejs
+RUN npm install
+RUN apt install build-essential -y
+RUN npm install -g @angular/cli
+RUN npm install --save-dev @angular-devkit/build-angular
+RUN npm install chart.js
+RUN npm i ngx-spinner
+RUN npm install ng2-charts --save
+
+
+
+WORKDIR ./medidor_estres
+
+COPY . .
+
+CMD ["ng","serve","--host=0.0.0.0","--disable-host-check"]
+
+EXPOSE 4200

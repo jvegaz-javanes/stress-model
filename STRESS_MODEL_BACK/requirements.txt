@@ -1,0 +1,7 @@
+flask
+ibm-watson
+flask_mysqldb
+mysqlclient
+flask_api
+flask_cors
+Unidecode

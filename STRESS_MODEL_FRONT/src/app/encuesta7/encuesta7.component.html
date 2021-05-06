@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+    <meta charset="utf-8"/>
+    <meta name="description" content="Encuesta"/><!--Específica la descripción de la página-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"/>
+    <title>Encuesta</title>
+  </head>
+
+  <body>
+    
+      <p></p>
+    <section id="pantalla-dividida">
+
+      <div class="barra"><!--Barra de avance-->
+          <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:63.63%">
+          63.63%
+        </div>
+      </div>
+      <p></p>
+
+      <div #numero class="pregunta"><!--Zona de pregunta-->
+        <p>7.- ¿Recibes asesor&iacute;as o ayuda de los miembros de otros departamentos cuando se solicita?</p>
+      </div>
+
+
+        <p></p>
+
+        <form class="contenedor" #myForm="ngForm" (submit)=templateForm(myForm.value) novalidate>
+          <div  class="imagen">
+            <img class="pregunta7" src="assets/Imagenes/7.png" alt="login" content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+          </div>
+            <br/>
+
+            <div class="respuesta" id="respuesta">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" ng-model="respuesta"
+                  value="1" ngModel>
+                <label class="form-check-label" for="inlineRadio1">1</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                  ng-model="respuesta" value="2" ngModel>
+                <label class="form-check-label" for="inlineRadio2">2</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                  ng-model="respuesta" value="3" ngModel>
+                <label class="form-check-label" for="inlineRadio3">3</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                  ng-model="respuesta" value="4" ngModel>
+                <label class="form-check-label" for="inlineRadio4">4</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                  ng-model="respuesta" value="5" ngModel>
+                <label class="form-check-label" for="inlineRadio5">5</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
+                  ng-model="respuesta" value="6" ngModel>
+                <label class="form-check-label" for="inlineRadio6">6</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7"
+                  ng-model="respuesta" value="7" ngModel>
+                <label class="form-check-label" for="inlineRadio7">7</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8"
+                  ng-model="respuesta" value="8" ngModel>
+                <label class="form-check-label" for="inlineRadio8">8</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio9"
+                  ng-model="respuesta" value="9" ngModel>
+                <label class="form-check-label" for="inlineRadio9">9</label>
+              </div>
+            
+              <div class="form-check form-check-inline">
+                <input #respuesta class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio10"
+                  ng-model="respuesta" value="10" ngModel>
+                <label class="form-check-label" for="inlineRadio10">10</label>
+              </div>
+            </div>
+            
+            <br />
+            <div class="next" rou>
+              <!--Boton next-->
+              <button id="boton" type="button" class="btn btn-info" routerLink="/Encuesta8"
+                (click)="encuesta(numero.value , myForm.value )">Siguiente</button>
+            </div>
+
+          <br />
+          
+          <div class="regresa">
+            <!--Boton anterior-->
+            <button type="button" class="btn btn-info" routerLink="/Encuesta6">Regresar</button>
+          </div>
+
+        </form>
+</section>
+      </body>
+  </html>

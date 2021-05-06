@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+    <meta charset="utf-8"/>
+    <meta name="description" content="Recomendaciones"/><!--Específica la descripción de la página-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"/>
+    <script src="jquery-1.10.2.min.js"></script>
+
+    <title>Encuesta</title>
+  </head>
+
+  <body>
+  <p></p>
+
+  <div class="recomendaciones">
+    <p>EL PROMEDIO DE TU SECTOR ES:</p>
+  </div>
+
+  <section id="pantalla-dividida">
+
+    <div class="container">
+      <div class="PROMEDIO">
+        <p>{{this.prom}}</p>
+      </div>
+    <div style="display: block;">
+    <canvas baseChart
+    [data]="ChartData"
+    [labels]="ChartLabels"
+    [chartType]="ChartType"></canvas>
+
+    </div>
+  </div>
+
+    <div class="imagen"><!--Lado derecho -->
+      <img class="imagen1" src="assets/Imagenes/recomen.png" alt="login" content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+    </div>
+  </section>
+</body>
+</html>

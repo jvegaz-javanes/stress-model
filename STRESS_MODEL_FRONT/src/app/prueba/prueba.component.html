@@ -1,0 +1,16 @@
+<header>
+    <input type="checkbox" id="btn-menu">
+    <label for="btn-menu"><img src="assets/Imagenes/iconomenu.png" width="30px" alt="menu">
+  </label>
+
+    <nav class="menu">
+      <ul>
+        <li><a routerLink="/Login"  routerLinkActive="active" (click)="logout()">Iniciar Sesi&oacute;n</a></li>
+        <li><a routerLink="/Registro" routerLinkActive="active" (click)="logout()" >Registro</a></li>
+        <li><a routerLink="/Administrador" routerLinkActive="active" (click)="logout()" >Administrador</a></li>
+      </ul>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+
+  

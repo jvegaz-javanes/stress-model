@@ -1,0 +1,21 @@
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    setTimeout(function () {
+      $(".content").fadeOut(1500);
+    }, 3000);
+
+    setTimeout(function () {
+      $(".content2").fadeIn(1500);
+    }, 6000);
+  });
+</script>
+
+  <p></p>
+<div class="spinner" *ngIf="!load" >
+  <img src="assets/Imagenes/loading.gif"/>
+  </div>
+  <div *ngIf="load">
+ <app-log-admin></app-log-admin>  
+   
+</div>

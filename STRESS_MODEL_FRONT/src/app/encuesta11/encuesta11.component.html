@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="es">
+
+<head>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+    <meta charset="utf-8" />
+    <meta name="description" content="Encuesta" />
+    <!--Específica la descripción de la página-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" />
+    <title>Encuesta</title>
+</head>
+
+<body>
+
+    <p></p>
+    <section id="pantalla-dividida">
+
+        <div class="barra">
+            <!--Barra de avance-->
+            <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar"
+                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                100%
+            </div>
+        </div>
+        <p></p>
+
+        <div #numero class="pregunta">
+            <!--Zona de pregunta-->
+            <p>11.- Comp&aacute;rtenos tus comentarios adicionales respecto a la empresa</p>
+        </div>
+
+        <p></p>
+
+        <div class="contenedor">
+            <div class="imagen">
+                <img class="pregunta11" src="assets/Imagenes/11.png" alt="login"
+                    content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+            </div>
+            
+            <div>
+                <p><textarea #valor rows="3" cols="40" name="comentario" placeholder="Escribe aqu&iacute; tus comentarios"></textarea></p>
+            </div>
+
+            <div class="next"><!--Boton next-->
+                <button type="button" class="btn btn-info"  (click)="encuesta11(valor.value)" routerLink="/Sugerencias">Siguiente</button>
+            </div>
+
+            <br/>
+            
+            <div class="regresa">
+                <!--Boton anterior-->
+                <button type="button" class="btn btn-info" routerLink="/Encuesta10">Regresar</button>
+            
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+

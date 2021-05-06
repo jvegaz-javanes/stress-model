@@ -1,0 +1,28 @@
+<div class="loginBox">
+    <!--Lado derecho -->
+    <img class="avatar" src="assets/Imagenes/login.png" alt="login"
+        content="width=device-width, user-scalable=no,initial-scale=1, maxium-scale=1, minimum-scalae=1">
+    <form id="formularioLogin">
+
+
+        <div class="input" type="text">
+            <!--Correo-->
+            <label>Email</label>
+            <input #user formControlName="user" type="email" id="user">
+        </div>
+
+        <div class="input" type="password">
+            <!--Contraseña-->
+            <label>Password</label>
+            <input #password formControlName="password" type="password" id="password">
+        </div>
+
+        <p>
+            <button class="go" routerLink="/Recomendaciones" routerLinkActive="active" (click)="login(user.value, password.value); " >Iniciar sesi&oacute;n</button>
+            <!--Boton GO-->
+        </p>
+
+        <br>
+
+    </form>
+</div>
